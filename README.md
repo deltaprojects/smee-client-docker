@@ -17,7 +17,7 @@ Options:
 ```
 
 
-#### Jenkins example
+#### example
 Setup smee-client
 
 - Go to https://smee.io/new
@@ -28,13 +28,14 @@ Ex.
 docker run -d --name smee-client deltaprojects/smee-client -u https://smee.io/z3x5DliUZN7GlQqI -t https://MY-INTERNAL-JENKINS:8443/github-webhook/
 ```
 
-Next, configure your GitHub/GitLab/BitBucket webhook:
+Next, configure your GitHub/GitLab/BitBucket webhook, for GitHub:
 
 - Paste in the smee.io **Webhook Proxy URL**, you copied from the step above
 - Choose *application/json* as the content type
 - Tell it to send the events you want
 - Press Add webhook
 
+#### Jenkins example
 Aslo setup your Jenkins to work with GitHub or other hosted git service.
 For GitHub
 - Setup Jenkins [GitHub plugin](https://plugins.jenkins.io/github) (pro tip: Set the *Specify another hook URL for GitHub configuration* to the smee.io Webhook Proxy URL)
